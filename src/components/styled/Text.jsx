@@ -24,6 +24,15 @@ export const h4 = styled.h4`
   text-align: center;
 `
 
+export const h5 = styled.h5`
+  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 1rem;
+`
+
 export const Mark = styled.span`
   position: relative;
   z-index: 1;

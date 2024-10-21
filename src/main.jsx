@@ -10,7 +10,6 @@ import {
   Stage,
   CameraControls,
   OrbitControls,
-  Stars,
 } from "@react-three/drei"
 import { StyleSheetManager, createGlobalStyle } from "styled-components"
 
@@ -27,11 +26,12 @@ import { Scene } from "@/components/render/Scene"
 import { Card, Container } from "@/components/styled/Card"
 import { Image } from "@/components/styled/Image"
 import { ol, ul, li } from "@/components/styled/List"
-import { h1, h2, h3, h4, p, a, Mark, i, Em } from "@/components/styled/Text"
+import { h1, h2, h3, h4, h5, p, a, Mark, i, Em } from "@/components/styled/Text"
 import { Content } from "@/components/styled/Content"
+import { Chat } from "@/components/styled/Chat"
 
 const GlobalStyle = createGlobalStyle`
-  h1, h2, h3, h4, h5, h6, p, li, label, th, td, a {
+  h1, h2, h3, h4, h5, h6, p, li, label, th, td, a, span {
 		color: white;
 		font-family: "Roboto", sans-serif ;
 	}
@@ -54,6 +54,7 @@ createRoot(document.getElementById("root")).render(
       h2: h2,
       h3: h3,
       h4: h4,
+      h5: h5,
       ol: ol,
       ul: ul,
       li: li,
@@ -62,6 +63,7 @@ createRoot(document.getElementById("root")).render(
       Mark,
       Em,
       Content,
+      Chat,
       Card,
       Container,
       View,
