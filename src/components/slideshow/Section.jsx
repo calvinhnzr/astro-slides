@@ -16,9 +16,9 @@ const Section = styled.section`
     outline: 0.4rem solid white;
   }
 
-  /* &:first-of-type {
+  &:first-of-type {
     background-color: ${COLOR_CARD};
-  } */
+  }
 `
 
 // layout: center || grid || intro || outro

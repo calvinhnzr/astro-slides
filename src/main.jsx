@@ -22,23 +22,16 @@ import "@/styles/index.css"
 import Tree from "@/components/render/Tree"
 import Stones from "@/components/render/Stones"
 import Target from "@/components/render/Target"
+import { Scene } from "@/components/render/Scene"
 
 import { Card, Container } from "@/components/styled/Card"
-import {
-  Headline,
-  SubHeadline,
-  Title,
-  SubTitle,
-} from "@/components/styled/Title"
-
+import { Image } from "@/components/styled/Image"
 import { ol, ul, li } from "@/components/styled/List"
 import { h1, h2, h3, h4, p, a, Mark, i, Em } from "@/components/styled/Text"
 import { Content } from "@/components/styled/Content"
 
-import { Scene } from "@/components/render/Scene"
-
 const GlobalStyle = createGlobalStyle`
-  h1, h2, h3, h4, h5, h6, p, li, label, th, td {
+  h1, h2, h3, h4, h5, h6, p, li, label, th, td, a {
 		color: white;
 		font-family: "Roboto", sans-serif ;
 	}
@@ -65,6 +58,7 @@ createRoot(document.getElementById("root")).render(
       ul: ul,
       li: li,
       a: a,
+      Image,
       Mark,
       Em,
       Content,

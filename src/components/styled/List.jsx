@@ -16,7 +16,7 @@ export const ul = styled.ul`
     z-index: 1;
 
     &::before {
-      content: "...";
+      content: "…";
       content: "_";
       position: absolute;
       left: -1.5rem;
