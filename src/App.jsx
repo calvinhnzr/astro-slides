@@ -64,7 +64,9 @@ export function App() {
         flat
         shadows
       >
-        {explosionView ? <Perf position={"top-left"} /> : null}
+        {explosionView && import.meta.env.DEV ? (
+          <Perf position={"top-left"} />
+        ) : null}
         <View.Port />
       </Canvas>
 
