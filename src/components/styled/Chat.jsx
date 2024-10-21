@@ -7,12 +7,12 @@ const Bubble = styled.span`
   color: white;
   font-family: 300;
   letter-spacing: 0.75px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding: 0.75rem 0;
 
   span {
     /* outline: 1px solid green; */
-    border-radius: 7px;
+    /* border-radius: 7px; */
     padding: 0.75rem 1rem;
     width: fit-content;
     font-weight: 300;
@@ -22,10 +22,10 @@ const Bubble = styled.span`
     text-align: left;
     position: relative;
     &::before {
-      content: url("./svg/bubble-left.svg");
+      /* content: url("./svg/bubble-left.svg"); */
       color: red;
       position: absolute;
-      top: -1.5px;
+      top: -2px;
       left: -1.8rem;
       z-index: 1;
     }
@@ -40,9 +40,9 @@ const Bubble = styled.span`
     position: relative;
 
     &::after {
-      content: url("./svg/bubble-right.svg");
+      /* content: url("./svg/bubble-right.svg"); */
       position: absolute;
-      top: -1.5px;
+      top: -2px;
       right: -1.8rem;
       z-index: 1;
     }
@@ -57,11 +57,15 @@ const spacing = "9rem"
 const Container = styled.div`
   /* outline: 1px solid red; */
   /* background-color: red; */
-  outline: 5px solid white;
-  border-radius: 1rem;
-  background-image: url("./img/chat-background.jpg");
-  background-size: cover;
-  box-shadow: 1px 1px 40px 10px rgba(0, 0, 0, 0.15);
+
+  /* outline: 5px solid white; */
+  /* border-radius: 1rem; */
+  /* background-image: url("./img/chat-background.jpg"); */
+  /* background-size: cover; */
+  /* box-shadow: 1px 1px 40px 10px rgba(0, 0, 0, 0.15); */
+
+  /* background-color: #2b3347; */
+
   /* grid-column: 4 / 10;
   grid-row: 1 / 13; */
   /* margin: 4rem 0; */
@@ -92,33 +96,53 @@ const Container = styled.div`
     background-color: #626f82;
   }
 
+  /*  */
   > h5 {
     text-align: center;
     color: white;
     font-size: 1rem;
+    display: none;
     span {
-      background-color: #cd4d4d;
+      /* background-color: #cd4d4d; */
       width: fit-content;
       padding: 0.5rem 0.75rem;
       border-radius: 7px;
     }
   }
 
-  .image {
-    /* width: 20rem; */
-    margin-left: 8rem;
+  &:has(> .image) {
+    display: flex;
+    align-items: flex-end;
 
+    &:has(.left) {
+      align-items: flex-start;
+    }
+    &:has(.right) {
+      align-items: flex-end;
+    }
+  }
+
+  .image {
+    width: 24rem;
     height: 30rem;
     /* padding: 0.75rem; */
     /* background-color: #626f82; */
     border: 0.75rem solid ${bm_color_green};
-    border-radius: 7px;
+    /* border-radius: 7px; */
 
     position: relative;
     z-index: 0;
 
+    &.left {
+      border: 0.75rem solid ${bm_color_gray_dark};
+    }
+
+    &.right {
+      border: 0.75rem solid ${bm_color_green};
+    }
+
     &::before {
-      content: url("./svg/bubble-right.svg");
+      /* content: url("./svg/bubble-right.svg"); */
       position: absolute;
       /* top: -1.5px; */
       top: -0.75rem;
@@ -159,7 +183,7 @@ export const Chat = (props) => {
         </h5>
       )}
       {props.img && (
-        <div className="image">
+        <div className={"image " + props.className}>
           <div className="crop">
             <img src={props.img} />
           </div>
