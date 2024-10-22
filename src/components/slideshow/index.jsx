@@ -39,6 +39,16 @@ const Div = styled.div`
   }
 `
 
+const Index = styled.span`
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  color: white;
+  z-index: 1000;
+  font-size: 1.3rem;
+`
+
 export const Slideshow = React.memo(({ data, max }) => {
   const [explosionView] = useAtom(explosionViewAtom)
 
@@ -59,8 +69,13 @@ export const Slideshow = React.memo(({ data, max }) => {
                     el={el}
                     key={sectionIndex}
                     index={sectionIndex}
+                    yIndex={sectionIndex}
+                    xindex={articleIndex}
                   >
                     <el.default />
+                    <Index>
+                      {articleIndex}.{sectionIndex}
+                    </Index>
                   </SectionWrapper>
                 )
               })}

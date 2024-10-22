@@ -9,7 +9,7 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   background-color: ${COLOR_SECTION};
-
+  position: relative;
   flex: none;
 
   &.explosion {
@@ -28,12 +28,14 @@ const FlexSection = styled(Section)`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 `
 const GridSection = styled(Section)`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   gap: 1rem;
+  position: relative;
 
   h1,
   h3 {
@@ -100,6 +102,8 @@ export const SectionWrapper = React.memo((props) => {
 
   // Default return if no conditions are met
   return (
-    <FlexSection className={sectionClassNames}>{props.children}</FlexSection>
+    <>
+      <FlexSection className={sectionClassNames}>{props.children}</FlexSection>
+    </>
   )
 })
