@@ -1,8 +1,34 @@
-# React + Vite
+## Praxis Projekt Seminar - Slideshow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Getting Started
 
-Currently, two official plugins are available:
+```bash
+# Install Dependencies
+npm i
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Run Development Server
+npm run dev
+```
+
+---
+
+### Src Folder Structure
+
+- `assets`
+- `components`: Contains the components of the application
+  - `render`: ThreeJS componets
+  - `slideshow`: Slideshow framework components
+  - `styled`: Custom styled components
+- `hooks`: useful hooks
+- `pages`: Contains MDX files for slides rendering
+  - `chapter-000-intro`
+    - `slide-000.mdx`
+    - `...`
+  - `chapter-010-problem`
+    - `slide-000.mdx`
+    - `slide-010.mdx`
+  - `...`
+- `store`: Global state and colors
+- `styles`: Basic styles
