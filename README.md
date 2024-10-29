@@ -14,6 +14,19 @@ npm run dev
 
 ---
 
+### Keys
+
+- `F`: Toggle Fullscreen
+- `E`: Toggle Explosion View
+- `ArrowRight`: Next Chapter
+- `ArrowLeft`: Previous Chapter
+- `ArrowDown`: Next Section
+- `ArrowUp`: Previous Section
+
+### Features
+
+- Gamepad Api Support (Tested with JoyCon Controller)
+
 ### Src Folder Structure
 
 - `assets`
