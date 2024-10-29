@@ -1,5 +1,7 @@
 ## Praxis Projekt Seminar - Slideshow
 
+![Slides Explosion View](./public/docs/thumbnail.png)
+
 ### Getting Started
 
 ```bash
